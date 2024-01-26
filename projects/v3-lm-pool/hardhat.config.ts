@@ -4,6 +4,7 @@ import '@typechain/hardhat'
 import 'dotenv/config'
 import { NetworkUserConfig } from 'hardhat/types'
 import 'solidity-docgen';
+import { makalu, map } from '@pancakeswap/common/network'
 require('dotenv').config({ path: require('find-config')('.env') })
 
 const bscTestnet: NetworkUserConfig = {
@@ -40,6 +41,8 @@ const config: HardhatUserConfig = {
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_MAKALU && { makalu }),
+    ...(process.env.KEY_MAP && { map }),
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,

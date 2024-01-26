@@ -7,6 +7,7 @@ import '@typechain/hardhat'
 import 'hardhat-watcher'
 import 'dotenv/config'
 import 'solidity-docgen'
+import { makalu, map } from '@pancakeswap/common/network'
 require('dotenv').config({ path: require('find-config')('.env') })
 
 const LOW_OPTIMIZER_COMPILER_SETTINGS = {
@@ -84,6 +85,8 @@ export default {
     ...(process.env.KEY_MAINNET && { bscMainnet }),
     ...(process.env.KEY_GOERLI && { goerli }),
     ...(process.env.KEY_ETH && { eth }),
+    ...(process.env.KEY_MAKALU && { makalu }),
+    ...(process.env.KEY_MAP && { map }),
     // mainnet: bscMainnet,
   },
   etherscan: {
