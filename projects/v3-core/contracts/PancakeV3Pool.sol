@@ -291,18 +291,18 @@ contract PancakeV3Pool is IPancakeV3Pool {
             observationIndex: 0,
             observationCardinality: cardinality,
             observationCardinalityNext: cardinalityNext,
-            feeProtocol: 209718400, // default value for all pools, 3200:3200, store 2 uint32 inside
+            feeProtocol: 255594300, // default value for all pools, 3900:3900, store 2 uint32 inside
             unlocked: true
         });
 
         if (fee == 100) {
-            slot0.feeProtocol = 216272100; // value for 3300:3300, store 2 uint32 inside
+            slot0.feeProtocol = 255594300; // value for 3900:3900, store 2 uint32 inside
         } else if (fee == 500) {
-            slot0.feeProtocol = 222825800; // value for 3400:3400, store 2 uint32 inside
+            slot0.feeProtocol = 255594300; // value for 3900:3900, store 2 uint32 inside
         } else if (fee == 2500) {
-            slot0.feeProtocol = 209718400; // value for 3200:3200, store 2 uint32 inside
+            slot0.feeProtocol = 255594300; // value for 3900:3900, store 2 uint32 inside
         } else if (fee == 10000) {
-            slot0.feeProtocol = 209718400; // value for 3200:3200, store 2 uint32 inside
+            slot0.feeProtocol = 255594300; // value for 3900:3900, store 2 uint32 inside
         }
 
         emit Initialize(sqrtPriceX96, tick);
