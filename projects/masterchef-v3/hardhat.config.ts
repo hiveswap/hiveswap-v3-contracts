@@ -1,17 +1,17 @@
 /* eslint-disable global-require */
 /* eslint-disable @typescript-eslint/no-var-requires */
-import type { HardhatUserConfig, NetworkUserConfig } from "hardhat/types";
-import "@nomiclabs/hardhat-ethers";
-import "@nomiclabs/hardhat-etherscan";
-import "@nomiclabs/hardhat-waffle";
-import "@openzeppelin/hardhat-upgrades";
-import "@typechain/hardhat";
-import "hardhat-abi-exporter";
-import "hardhat-contract-sizer";
-import "solidity-coverage";
-import "solidity-docgen";
-import "dotenv/config";
-import { makalu, map } from '@pancakeswap/common/network';
+import type { NetworkUserConfig } from 'hardhat/types'
+import '@nomiclabs/hardhat-ethers'
+import '@nomiclabs/hardhat-etherscan'
+import '@nomiclabs/hardhat-waffle'
+import '@openzeppelin/hardhat-upgrades'
+import '@typechain/hardhat'
+import 'hardhat-abi-exporter'
+import 'hardhat-contract-sizer'
+import 'solidity-coverage'
+import 'solidity-docgen'
+import 'dotenv/config'
+import { makalu, map, merlin } from '@pancakeswap/common/network'
 
 require("dotenv").config({ path: require("find-config")(".env") });
 
@@ -49,6 +49,7 @@ const config = {
     ...(process.env.KEY_ETH && { eth }),
     ...(process.env.KEY_MAKALU && { makalu }),
     ...(process.env.KEY_MAP && { map }),
+    ...(process.env.KEY_MAP && { merlin }),
     // mainnet: bscMainnet,
   },
   etherscan: {

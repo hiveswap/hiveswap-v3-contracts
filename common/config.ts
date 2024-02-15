@@ -8,6 +8,14 @@ export const configs = {
     cake: '0xbA67eAfdC50CAA4C5B1baF3F7dA47c4aD2D1D613',
     smartRouterHelper: '0xdAecee3C08e953Bd5f89A5Cc90ac560413d709E3',
   },
+  merlin: {
+    WNATIVE: '0xf6d226f9dc15d9bb51182815b320d3fbe324e1ba',
+    nativeCurrencyLabel: 'BTC',
+    v2Factory: '0x0000000000000000000000000000000000000000',
+    stableFactory: '0x0000000000000000000000000000000000000000',
+    stableInfo: '0x0000000000000000000000000000000000000000',
+    cake: '0x9C2f9e3Bb622c18039d418C97e499d1f781cCBa3',
+  },
   map: {
     WNATIVE: '0x13cb04d4a5dfb6398fc5ab005a6c84337256ee23',
     nativeCurrencyLabel: 'MAPO',

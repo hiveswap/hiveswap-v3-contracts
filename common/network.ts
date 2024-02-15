@@ -11,3 +11,9 @@ export const map: NetworkUserConfig = {
   chainId: 22776,
   accounts: [process.env.KEY_MAP!],
 }
+
+export const merlin: NetworkUserConfig = {
+  url: 'https://rpc.merlinchain.io',
+  chainId: 4200,
+  accounts: [process.env.KEY_MAP!],
+}
